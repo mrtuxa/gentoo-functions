@@ -1,9 +1,9 @@
 merge() {
- doas emerge -a $1 
+ doas emerge -a $@ 
 }
 
 unmerge() {
- doas emerge --unmerge $1
+ doas emerge --unmerge $@
 }
 
 addoverlay() {
@@ -13,7 +13,7 @@ addoverlay() {
 
 addopkg() {
  addoverlay $1
- merge $2
+ merge $@
 }
 
 addkeyword64() {
